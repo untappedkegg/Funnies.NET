@@ -2,12 +2,20 @@
 {
     public static class Funnies
     {
+        /// <summary>
+        /// Gets a single random funny from the list
+        /// </summary>
+        /// <returns></returns>
         public static string GetLine()
         {
             var rand = new System.Random(System.DateTime.UtcNow.Millisecond);
             return LINES[rand.Next(LINES.Length)];
         }
 
+        /// <summary>
+        /// Gets a single random funny from the list with a newline on both sides
+        /// </summary>
+        /// <returns></returns>
         public static string GetPaddedLine()
         {
             var newline = System.Environment.NewLine;
